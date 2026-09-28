@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Check-in</title>
+</head>
+<body style="background-color: lightblue; font-family: Arial; display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+    <div style="background:whitesmoke; padding:40px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.2); width:500px;">
+        <h2 style="color:#2c3e50; text-align: center; font-size: 28px; margin-bottom: 25px;">Patient Check-In</h2>
+            
+            <!--checkIn.php will be added later to update database-->
+            <form action="checkIn.php" method="POST">
+
+                <label for="PatientID">Patient ID:</label>
+                <div style="display:flex; gap:10px;">
+                    <input type="search" id="patientID" name="patientID"
+                        placeholder="Enter Patient ID"
+                        required
+                        style="flex:1; padding:8px;">
+    
+                </div><br>
+
+                <label for="department">Department:</label><br>
+                <select name="department" id="department" required style="width:100%; padding:8px;">
+                    <option value="" selected disabled hidden>Select</option>
+                    <option value="1">Cardiology</option>
+                    <option value="2">Neurology</option>
+                    <option value="3">Pediatrics</option>
+                    <option value ="4"> Orthopedics</option>
+                    <option value="5">Emergency</option>
+                </select><br><br>
+
+                <label for="visitDate">Visit Date:</label><br>
+                <input type="date" id="visitDate" name="visitDate"
+                    required
+                    style="width:100%; padding:8px;"><br><br>
+
+                <label for="staff">Assigned Staff:</label><br>
+                <div style="display:flex; gap:10px;">
+                    <input type="text" id="staff" name="staff"
+                    placeholder="Enter Staff ID (e.g. 1-10)"
+                    required
+                    style="flex:1; padding:8px;">
+
+                </div><br>
+
+                <div style="text-align:center;">
+                    <input type="submit" value="Check In Patient" style="padding:10px 20px;">
+                </div>
+            </form>
+        </div>
+</body>
+</html>

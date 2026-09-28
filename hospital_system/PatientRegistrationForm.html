@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Registration</title>
+
+</head>
+<body style="background-color: lightblue; font-family: Arial; display:flex; justify-content: center; align-items: center; min-height: 100vh;">
+
+    <div style="background:whitesmoke; padding:40px; border-radius: 10px; box-shadow:0 2px 10px rgba(0,0,0,0.2); width:500px;">
+
+        <h2 style="color:#2c3e50; text-align: center; font-size: 28px; margin-bottom: 25px;"> Patient Registration </h2>
+        <!--patientInfo.php will be added later to update database-->
+        <form action="patientInfo.php" method="POST">
+
+            <div style="display:flex; gap:10px;">
+                <div style="flex:1">
+                    <label for="fname">First name:</label><br>
+                    <input type="text" id="fname" name="fname" required style="width: 100%; padding:8px;">
+                </div>
+
+                <div style="flex:1">
+                    <label for="lname">Last name:</label><br>
+                    <input type="text" id="lname" name="lname" required style="width: 100%; padding:8px;">
+                </div>
+            </div><br>
+
+            <label for="dob">Date of Birth</label><br>
+            <input type="date" id="dob" name="dob" required style="width:100%; padding:8px;"><br><br>
+
+            <label for="addr">Address:</label><br>
+            <input type="text" id="addr" name="addr" style="width:100%; padding:8px;"><br><br>
+
+            <label for="phonenum">Phone Number:</label><br>
+            <input type="tel" id="phonenum" name="phonenum" 
+                placeholder="XXXXXXXXXX"
+                required
+                style="width:100%; padding:8px;"><br><br>
+
+            <label for="insurance">Provider Type:</label><br>
+            <select name="insurance" id="insurance" required style="width:100%; padding: 8px;">
+                <option value="" selected disabled hidden>Select</option>
+                <option value="UnitedHealthCare">UnitedHealthCare</option>
+                <option value="BCBS"> BlueCross BlueShield</option>
+                <option value="Medicare"> Medicare</option>
+                <option value ="Medicaid"> Medicaid</option>
+                <option value="Cigna">Cigna</option>
+                <option value="Aetna">Aetna</option>
+            </select><br><br>
+
+            <div id="insuranceIDContainer" style="display:none;">
+                <label for="insuranceID">Insurance Type:</label><br>
+                <select name="type" required style="width:100%; padding: 8px;">
+                    <option value="" disabled selected> Select Type</option>
+                    <option value="HMO">HMO</option>
+                    <option value="PPO">PPO</option>
+                    <option value="EPO">EPO</option>
+                </select>
+            </div><br>
+
+            <div style="text-align: center;">
+                <input type="submit" value="Register Patient" style="padding:10px 20px;">
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function (){
+            const insurance = document.getElementById("insurance");
+            const container = document.getElementById("insuranceIDContainer");
+            const insuranceID = document.getElementById("insuranceID");
+
+            insurance.addEventListener("change", function () {
+                if (insurance.value !== ""){
+                    container.style.display = "block";
+                    insuranceID.setAttribute("required", "true");
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Management</title>
+</head>
+<body style="background-color: lightblue; font-family: Arial;">
+    <h1 style="text-align:center; color:#2c3e50;">Staff Management</h1>
+    
+    <div style="display:flex; flex-wrap:wrap; justify-content: center; gap:20px; margin-top:40px;">
+
+        <!--addStaff.php will be added later to update database-->
+        <div style="background:whitesmoke; padding:20px; width:220px; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.2); text-align: center;">
+            <h3>Add Staff</h3>
+            <p>Create New Employee Record</p>
+            <a href="staff/create.php"><button>Open</button></a>
+        </div>
+
+        <!--deleteStaff.php will be added later to update database-->
+        <div style="background:whitesmoke; padding:20px; width:220px; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.2); text-align: center;">
+            <h3>Remove Staff</h3>
+            <p>Remove Employee Record</p>
+            <a href="staff/delete.php"><button>Open</button></a>
+        </div>
+
+        <!--addCertificate.php will be added later to update database-->
+        <div style="background:whitesmoke; padding:20px; width:220px; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.2); text-align: center;">
+            <h3>Update Certification</h3>
+            <p>Modify Staff Credentials</p>
+            <a href="staff/addCertificate.php"><button>Open</button></a>
+        </div>
+
+        <!--assignDepartment.php will be added later to update database-->
+        <div style="background:whitesmoke; padding:20px; width:220px; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.2); text-align: center;">
+            <h3>Assign Department</h3>
+            <p>Move Staff Between Departments</p>
+            <a href="staff/assignDepartment.php"><button>Open</button></a>
+        </div>
+
+        <!--editSalary.php will be added later to update database-->
+        <div style="background:whitesmoke; padding:20px; width:220px; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.2); text-align: center;">
+            <h3>Edit Salary</h3>
+            <p>Update Salary Details</p>
+            <a href="staff/editSalary.php"><button>Open</button></a>
+        </div>
+    </div>
+
+        <div style="position:fixed; bottom:20px; right:20px;">
+            <button type="button" onClick="location.href='Administrator.html'">Back to Dashboard</button>
+        </div>
+</body>
+</html>

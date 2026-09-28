@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrator Dashboard</title>
+</head>
+<body style="background-color: lightblue; font-family: Arial;">
+    <h1 style="text-align:center; color:#2c3e50;">Administrator Dashboard</h1>
+    <div style="display:flex; flex-wrap:wrap; justify-content: center; gap:20px; margin-top:40px;">
+
+        <div style="background:whitesmoke; padding:20px; width:250px; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.2); text-align: center;">
+            <h3>Staff</h3>
+            <p>Manage Staff</p>
+            <a href="StaffManagement.html"><button>Open</button></a>
+        </div>
+
+        <!--department.php will be added later to update database-->
+        <div style="background:whitesmoke; padding:20px; width:250px; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.2); text-align: center;">
+            <h3>Departments</h3>
+            <p>Manage Departments</p>
+            <a href="department.php"><button>Open</button></a>
+        </div>
+
+        <!--userAccess.php will be added later to update database-->
+        <div style="background:whitesmoke; padding:20px; width:250px; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.2); text-align: center;">
+            <h3>User</h3>
+            <p>Manage User Access</p>
+            <a href="userAccess.php"><button>Open</button></a>
+        </div>
+
+        <!--system.php will be added later to generate real-time view of database-->
+        <div style="background:whitesmoke; padding:20px; width:250px; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.2); text-align: center;">
+            <h3>System</h3>
+            <p>Run System Reports</p>
+            <a href="Reports.php"><button>Open</button></a>
+        </div>
+
+        <div style="position:fixed; bottom:20px; right:20px;">
+            <button type="button" onClick="location.href='Login.html'">Logout</button>
+        </div>
+
+</body>
+</html>
